@@ -9,11 +9,12 @@ Credit Card Fraudulent Transactions are < 1% of all transactions. In 2022 they a
 
 The preprocessing profiles missingness, adds null flags, reduces redundancy among highly correlated V-features, and frequency-encodes high-cardinality categorical columns.
 
-<img width="301" height="163" alt="image" src="https://github.com/user-attachments/assets/7238e941-0bf3-4641-a674-3721464071b9" />
+<img width="721" height="390" alt="image" src="https://github.com/user-attachments/assets/1961b982-f9c2-4d45-96ba-9970d72bc78e" />
+
 
 We first build unsupervised baselines—K-Means, Isolation Forest, and Autoencoder—using distance-to-centroid, anomaly, and reconstruction-error scores. We then expand the unsupervised set with DBSCAN (Density-Based Clustering) and other methods including Neural Networks and Graphs.
 
-<img width="222" height="162" alt="image" src="https://github.com/user-attachments/assets/14302e30-b7d8-4bc5-8049-087f1493d7cd" />
+<img width="576" height="419" alt="image" src="https://github.com/user-attachments/assets/e1829b3a-a04c-4530-9500-d5f17204cd72" />
 
 Finally, we evaluate a hybrid approach: engineer unsupervised signals (K-Means, Isolation Forest, PCA) and form expanded feature set. A supervised LightGBM model is trained on these features. Evaluation using a held-out chronological validation split for Recall and Precision Evaluation, and test set predictions are submitted to Kaggle for Kaggle (Public/Private) 
 
@@ -23,7 +24,8 @@ Finally, we evaluate a hybrid approach: engineer unsupervised signals (K-Means, 
 
 **Hybrid model**(PCA, K-Means,Isolation Forest) +LightGBM produced a large lift: Recall 0.915, Precision 0.529, Kaggle Public 0.927/Private 0.887. False positives dropped by ~50% vs. prior experiments; PCA_0 emerged as the most important feature (≈3× the next). 
 
-<img width="360" height="191" alt="image" src="https://github.com/user-attachments/assets/c0e76172-2a0f-4e7e-a18e-882badec20e6" />
+<img width="730" height="387" alt="image" src="https://github.com/user-attachments/assets/07ec7feb-6adc-4b5c-9d7b-9be1ed1a65cf" />
+
 
 
 **Conclusion**
